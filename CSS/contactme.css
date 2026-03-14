@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    overflow-wrap:break-word;
+}
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Poppins',sans-serif;
+    background-color: rgb(0, 0, 33);
+}
+.container{
+    width: 100%;
+    max-width:37.5rem;
+    margin:auto;
+    background-color:rgba(256, 256, 256, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+.container form{
+    display:flex;
+    flex-direction:column;
+    padding:0.5rem;
+    gap:1rem;
+}
+.container form .box{
+    display:flex;
+    flex-direction: column;
+    padding:0.5rem;
+}
+.container form .button{
+    width:98%;
+    margin:auto;
+    padding:1rem;
+    border:1px solid black;
+    border-radius: 30px;
+    transition: transform 0.3s ease-in-out 0s;
+    font-size: 1.2rem;
+    background-color: lavender;
+    color: rgb(125, 83, 192);
+    font-weight: 700;
+}
+.container form .button:hover{
+    transform:scale(1.02);
+    background-color: rgb(168, 163, 163);
+}
+.container form .box input{
+    padding:0.8rem 0px;
+}
+input,textarea{
+    width:100%;/*sometime they can leak*/
+    outline: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid whitesmoke;
+    caret-color: whitesmoke;
+    color:whitesmoke;
+    font-size: 1.05rem;
+    padding:0 0.2rem;
+}
+.container form .box label{
+    color:lavender;
+    font-size: 1.2rem;
+}
+.container form h1{
+    margin:auto;
+    color:lavender
+}
+/*RESPONSIVE FOR MOBILE*/
+@media screen and (max-width:600px){
+    body{
+        margin:1rem;
+    }
+    .container form{/*this is not good bcz it is not grow if phoe is in landscape and body min-height is 100vh so there is no rekative thing to grow*/ 
+        min-height: 100vh;
+    }
+}
